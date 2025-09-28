@@ -31,7 +31,7 @@ export default function User({item,deleteUser}) {
         e.preventDefault()
         if(dataModal){
           try{
-            const response = await axios.put(`http://localhost:3000/api/users/edit/${dataModal._id}`, {
+            const response = await axios.put(`http://localhost:3000/api/register/edit/${dataModal._id}`, {
                 firstName: dataModal.username,
                 lastName: dataModal.username,
                 username: name,

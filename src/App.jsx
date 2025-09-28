@@ -12,7 +12,7 @@ function App() {
   const deleteUser = async (id) =>{
     if(id) {
       try {
-        const response = await axios.delete(`http://localhost:3000/api/users/${id}`, {
+        const response = await axios.delete(`http://localhost:3000/api/register/delete${id}`, {
           headers: {
             "Content-Type": "application/json",
           },
@@ -30,7 +30,7 @@ function App() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/users", {
+      const response = await axios.get("http://localhost:3000/api/register", {
         headers: {
           "Content-Type": "application/json",
         },

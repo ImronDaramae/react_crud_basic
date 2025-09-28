@@ -9,11 +9,10 @@ export default function AddForm(){
     const  saveData = async (e) => {
         e.preventDefault()
         try{
-            const response = await axios.post("http://localhost:3000/api/users/create", {
-                firstName: name,
-                lastName: name,
+            const response = await axios.post("http://localhost:3000/api/register/create", {
+                email: name,
                 username: name,
-                password: "1234"
+                password: name
             });
             if(response.status === 201){
                 console.log("สมัครสมาชิกสำเร็จ");
