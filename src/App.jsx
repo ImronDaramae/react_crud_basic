@@ -12,7 +12,7 @@ function App() {
   const deleteUser = async (id) =>{
     if(id) {
       try {
-        const response = await axios.delete(`http://localhost:3000/api/register/delete${id}`, {
+        const response = await axios.delete(`http://localhost:3000/api/register/delete/${id}`, {
           headers: {
             "Content-Type": "application/json",
           },
